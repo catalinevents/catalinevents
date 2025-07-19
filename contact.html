@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="fav.logo/favicon.png" />
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="fav.logo/logo.png" alt="Logo Cătălin Events" />
+  </div>
+  <!-- Navbar -->
+  <nav>
+    <img src="fav.logo/logo.png" alt="Logo Cătălin Events" />
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Acasă</a>
+      <a href="despre.html">Despre</a>
+      <a href="servicii.html">Servicii</a>
+      <a href="portofoliu.html">Portofoliu</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <!-- Hero -->
+  <section class="hero-contact">
+    <div class="hero-contact-content">
+      <h1>Contact</h1>
+    </div>
+  </section>
+
+  <!-- Form & Info -->
+  <section class="contact-section">
+    <div class="contact-form">
+      <form action="https://formsubmit.co/catalin.events@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Nume complet" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="6" placeholder="Mesajul tău..." required></textarea>
+
+        <!-- Redirecționare după trimitere -->
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/multumim.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Trimite mesaj</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Intră în legătură cu noi!</h2>
+      <p><img src="images/icons/phone.svg" alt="Telefon"> 0742 694 801</p>
+      <p><img src="images/icons/whatsapp.svg" alt="WhatsApp"> 0742 694 801</p>
+      <p><img src="images/icons/mail.svg" alt="Email">
+        <a href="mailto:catalin.events@gmail.com"
+          style="color: #111; text-decoration: none;">catalin.events@gmail.com</a>
+      </p>
+      <p><img src="images/icons/facebook.svg" alt="Facebook">
+        <a href="https://www.facebook.com/share/1ByjMHu79K/" target="_blank">Cătălin Events</a>
+      </p>
+    </div>
+  </section>
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="metalGriDark" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#444444" />
+        <stop offset="50%" stop-color="#333333" />
+        <stop offset="100%" stop-color="#1f1f1f" />
+      </linearGradient>
+    </defs>
+    <path d="M0,0 C480,80 960,0 1440,80 L1440,0 L0,0 Z" fill="url(#metalGriDark)" />
+  </svg>
+</div>
+  <div class="footer">
+    &copy; 2025 Cătălin Events. Toate drepturile rezervate.
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

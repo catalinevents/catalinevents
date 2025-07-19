@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="fav.logo/favicon.png" />
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="fav.logo/logo.png" alt="Logo Cătălin Events" />
+  </div>
+  <!-- Navbar -->
+  <nav>
+    <img src="fav.logo/logo.png" alt="Logo Cătălin Events" />
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="despre.html">Despre</a>
+      <a href="servicii.html">Servicii</a>
+      <a href="portofoliu.html">Portofoliu</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <!-- Header + Slideshow -->
+  <header>
+    <div class="header-content">
+      <h1>Cătălin Events</h1>
+      <p class="slogan-box">Evenimente unice. Emoții reale. Amintiri vii.</p>
+    </div>
+  </header>
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="metalGriDark" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#f5f5f5" />
+          <stop offset="50%" stop-color="#eeeeee" />
+          <stop offset="100%" stop-color="#dcdcdc" />
+        </linearGradient>
+      </defs>
+      <path d="M0,0 C480,80 960,0 1440,80 L1440,0 L0,0 Z" fill="url(#metalGriDark)" />
+    </svg>
+  </div>
+  <!-- Galerie Trio -->
+  <section class="gallery-section">
+    <div class="gallery-text">
+      <h2>Portofoliu</h2>
+      <p>Emoții autentice, surprinse cu suflet. Descoperă câteva cadre care spun o poveste.</p>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/slide1.jpg" alt="Slide 1" /></div>
+        <div class="swiper-slide"><img src="images/slide2.jpg" alt="Slide 2" /></div>
+        <div class="swiper-slide"><img src="images/slide3.jpg" alt="Slide 3" /></div>
+        <div class="swiper-slide"><img src="images/photo-dreapta.jpg" alt="Slide 5" /></div>
+      </div>
+    </div>
+    <div class="val-peste">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="white" />
+    </svg>
+  </div>
+    <div class="gallery-button-wrapper">
+      <a href="portofoliu.html" class="contact-button">Vezi Portofoliul Complet</a>
+    </div>
+  </section>
+  
+  <section class="highlight-section">
+    <div class="overlay"></div>
+    <div class="highlight-content">
+      <h2>Bucurați-vă de povestea completă a evenimentului vostru!</h2>
+      <p>Surprindem momente reale, zâmbete sincere și emoții așa cum sunt trăite. Suntem acolo pentru ca tu să te bucuri
+        pe deplin de ziua ta — de la emoțiile de dimineață până la zâmbetele de la final.</p>
+      <a href="contact.html" class="contact-button">Contactează-ne</a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      &copy; 2025 Cătălin Events. Toate drepturile rezervate.
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
