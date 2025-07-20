@@ -10,9 +10,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
-  
-/* ====== INDEX ====== */  
+}
+
+/* ====== INDEX ====== */
 body {
   font-family: 'Roboto', sans-serif;
   background: rgb(247, 247, 245);
@@ -54,6 +54,7 @@ header {
   align-items: flex-end;
   padding-bottom: 80px;
 }
+
 /* background peste poza*/
 header::before {
   content: "";
@@ -456,8 +457,9 @@ nav img {
 .btn-cta:hover {
   background-color: #a37f47;
 }
+
 /* ====== SERVICII ====== */
-  .hero-servicii {
+.hero-servicii {
   height: 91.5vh;
   background: url('../images/hero-servicii.jpg') top/cover no-repeat;
   display: flex;
@@ -466,17 +468,17 @@ nav img {
   align-items: center;
   text-align: center;
   padding-bottom: 120px;
-  }
+}
 
-  .hero-serv-cont {
+.hero-serv-cont {
   font-size: 20px;
   max-width: 700px;
   line-height: 1;
   position: relative;
   z-index: 1;
-  }
+}
 
-  .hero-servicii::before {
+.hero-servicii::before {
   content: "";
   position: absolute;
   top: 0;
@@ -485,17 +487,18 @@ nav img {
   height: 91.5%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 0;
-  }
+}
 
-    .hero-serv-cont h1 {
+.hero-serv-cont h1 {
   font-size: 60px;
   font-family: 'Playfair Display', serif;
-  }
-  .packages-section {
+}
+
+.packages-section {
   padding: 4rem 2rem;
   text-align: center;
   color: black;
-  }
+}
 
 .packages-section h2 {
   font-size: 2rem;
@@ -512,7 +515,7 @@ nav img {
   background: #ffffff;
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
@@ -557,6 +560,7 @@ nav img {
 .cta-button:hover {
   background: #747474;
 }
+
 .servicii-wrapper {
   display: flex;
   flex-direction: column;
@@ -570,7 +574,7 @@ nav img {
   background: #fff;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   width: 100%;
 }
 
@@ -596,9 +600,11 @@ nav img {
   text-align: center;
   font-weight: bold;
 }
+
 .section-subtitle {
- 
-  margin-top: -80px;   /* micșorează dacă e prea mare */
+
+  margin-top: -80px;
+  /* micșorează dacă e prea mare */
   margin-bottom: 40px;
   font-size: 24px;
   font-weight: 600;
@@ -631,8 +637,9 @@ nav img {
 .whatsapp-button svg {
   fill: white;
 }
+
 .packages-section {
-  padding:40px 24 px 64 px 24 px;
+  padding: 40px 24 px 64 px 24 px;
   text-align: center;
   color: black;
 }
@@ -650,10 +657,11 @@ nav img {
 
 .servicii-intro-img img {
   max-width: 100%;
-    height: auto;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 /* ====== PORTOFOLIU ====== */
 .hero {
   height: 100vh;
@@ -786,6 +794,7 @@ nav img {
 .gallery-mobile {
   display: none;
 }
+
 .wave-divider {
   position: relative;
   height: 100px;
@@ -793,11 +802,13 @@ nav img {
   line-height: 0;
   z-index: 2;
   margin-top: 0px;
-  
+
 }
+
 .wave-divider svg path {
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5));
 }
+
 .wave-divider svg {
   display: block;
   width: 100%;
@@ -805,22 +816,27 @@ nav img {
   transform: scalex(1.2);
   transform-origin: center;
 }
+
 .val-peste {
   position: relative;
   z-index: 10;
-  margin-top: -40px; /* ca valul să urce peste următoarea secțiune */
-  pointer-events: none; /* ca să nu blocheze click-uri */
+  margin-top: -40px;
+  /* ca valul să urce peste următoarea secțiune */
+  pointer-events: none;
+  /* ca să nu blocheze click-uri */
 }
 
 .val-peste svg {
   display: block;
-  width: 120%;
+  width: 100%;
   height: 90px;
   margin-left: 0;
 }
+
 .val-peste svg path {
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
 }
+
 /* ====== CONTACT ====== */
 
 .hero-contact {
@@ -941,7 +957,7 @@ button {
 
   .nav-links {
     display: none;
-    flex-direction: column;     
+    flex-direction: column;
     width: 100%;
     gap: 10px;
     padding: 10px 0;
@@ -967,7 +983,8 @@ button {
     z-index: 10001;
     cursor: pointer;
     color: white;
-  }
+    align-self: center;    
+    }
 
   .header-content h1 {
     font-size: 40px;
@@ -1103,14 +1120,16 @@ button {
   .founder-section {
     padding-bottom: 30px;
   }
-/* ====== CS MOBILE SERVICII ======*/
-    .servicii-wrapper {
+
+  /* ====== CS MOBILE SERVICII ======*/
+  .servicii-wrapper {
     flex-direction: row;
   }
 
   .servicii-col {
     width: 50%;
   }
+
   /* css mobile portofoliu */
   /* HERO */
   .hero {
@@ -1147,14 +1166,14 @@ button {
     max-width: 90%;
     line-height: 1.4;
     text-align: center;
-    }
+  }
 
   .section-title p {
     font-size: 15px;
     text-align: center;
   }
 
-  
+
   /* CARUSEL CENTRAL PE MOBIL */
   .gallery-mobile {
     width: 100vw;
@@ -1182,10 +1201,9 @@ button {
     border-radius: 0;
     object-fit: cover;
     object-position: center;
-      }  
-      .val-peste {
-        display: block;
-      
-      .val-peste svg {width: 100%};
-      height: auto;}
+  }
+
+
+
+
 }
