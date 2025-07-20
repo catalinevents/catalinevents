@@ -44,6 +44,7 @@ body {
 
 /*Hero Section */
 header {
+  background-image: url('../images/image14.jpg');
   height: 91.5vh;
   background-size: cover;
   background-position: center;
@@ -458,7 +459,7 @@ nav img {
 /* ====== SERVICII ====== */
   .hero-servicii {
   height: 91.5vh;
-  background: url('../images/hero-servicii.jpg') center/cover no-repeat;
+  background: url('../images/hero-servicii.jpg') top/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -490,6 +491,169 @@ nav img {
   font-size: 60px;
   font-family: 'Playfair Display', serif;
   }
+  .packages-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: black;
+  }
+
+.packages-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.packages-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.package-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card .icon {
+  margin-bottom: 1rem;
+  color: #2e2e2e;
+}
+
+.package-card h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.package-card li {
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cta-button {
+  background: #c59d5f;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #747474;
+}
+.servicii-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.servicii-col {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  width: 100%;
+}
+
+.servicii-col h3 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+  font-weight: bold;
+}
+
+.servicii-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicii-col li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.section-subtitle {
+ 
+  margin-top: -80px;   /* micșorează dacă e prea mare */
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-button svg {
+  fill: white;
+}
+.packages-section {
+  padding:40px 24 px 64 px 24 px;
+  text-align: center;
+  color: black;
+}
+
+.package-card p {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.servicii-intro-img {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.servicii-intro-img img {
+  max-width: 100%;
+    height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 /* ====== PORTOFOLIU ====== */
 .hero {
   height: 100vh;
@@ -652,7 +816,7 @@ nav img {
   display: block;
   width: 120%;
   height: 90px;
-  margin-left: -10vw;
+  margin-left: 0;
 }
 .val-peste svg path {
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
@@ -777,12 +941,10 @@ button {
 
   .nav-links {
     display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1px);
+    flex-direction: column;     
     width: 100%;
-    gap: 20px;
-    padding: 20px 0;
+    gap: 10px;
+    padding: 10px 0;
     text-align: center;
 
   }
@@ -941,7 +1103,14 @@ button {
   .founder-section {
     padding-bottom: 30px;
   }
+/* ====== CS MOBILE SERVICII ======*/
+    .servicii-wrapper {
+    flex-direction: row;
+  }
 
+  .servicii-col {
+    width: 50%;
+  }
   /* css mobile portofoliu */
   /* HERO */
   .hero {
@@ -1013,5 +1182,10 @@ button {
     border-radius: 0;
     object-fit: cover;
     object-position: center;
-  }  
+      }  
+      .val-peste {
+        display: block;
+      
+      .val-peste svg {width: 100%};
+      height: auto;}
 }

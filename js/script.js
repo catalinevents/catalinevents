@@ -7,29 +7,7 @@ window.addEventListener("load", function () {
   }, 500);
 });
 
-// 🖼 Background Slideshow – Doar pe index
-if (document.querySelector("header")) {
-  const header = document.querySelector("header");
-  const images = [
-    "images/image4.jpg",
-    "images/image6.jpg",
-    "images/image10.jpg",
-    "images/image12.jpg",
-    "images/image13.jpg",
-    "images/image14.jpg",
-    "images/image15.jpg",
-    "images/image16.jpg"
-  ];
-  let current = 0;
 
-  function changeBackground() {
-    current = (current + 1) % images.length;
-    header.style.backgroundImage = "url('" + images[current] + "')";
-  }
-
-  header.style.backgroundImage = "url('" + images[0] + "')";
-  setInterval(changeBackground, 5000);
-}
 
 // 🌀 Swiper – Doar dacă există clasa .mySwiper
 if (document.querySelector('.mySwiper')) {
@@ -80,7 +58,26 @@ if (document.querySelector('.specialSwiper')) {
     fadeEffect: { crossFade: true }
   });
 }
+// Animare fade-in când intră în viewport
+const fadeIns = document.querySelectorAll('.fade-in');
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+fadeIns.forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = 'translateY(40px)';
+  el.style.transition = 'all 0.8s ease';
+  observer.observe(el);
+});
 // 🍔 Hamburger Menu
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
