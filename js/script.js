@@ -15,7 +15,7 @@ if (document.querySelector('.mySwiper')) {
     loop: true,
     effect: "fade",
     autoplay: {
-      delay: 1500,
+      delay: 5000,
       disableOnInteraction: false
     },
     fadeEffect: {
@@ -28,7 +28,7 @@ if (document.querySelector('.nuntaSwiper')) {
     loop: true,
     effect: "fade",
     autoplay: {
-      delay: 3500,
+      delay: 5000,
       disableOnInteraction: false
     },
     fadeEffect: { crossFade: true }
@@ -40,7 +40,7 @@ if (document.querySelector('.botezSwiper')) {
     loop: true,
     effect: "fade",
     autoplay: {
-      delay: 3500,
+      delay: 5000,
       disableOnInteraction: false
     },
     fadeEffect: { crossFade: true }
@@ -52,7 +52,7 @@ if (document.querySelector('.specialSwiper')) {
     loop: true,
     effect: "fade",
     autoplay: {
-      delay: 3500,
+      delay: 5000,
       disableOnInteraction: false
     },
     fadeEffect: { crossFade: true }

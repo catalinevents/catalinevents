@@ -1,4 +1,6 @@
 /* Variabile / root */
+
+
 :root {
   --text-color: white;
   --accent-color: #d4af37;
@@ -43,8 +45,9 @@ body {
 }
 
 /*Hero Section */
+
 header {
-  background-image: url('../images/image14.jpg');
+  background-image: url('../images/image14.webp');
   height: 91.5vh;
   background-size: cover;
   background-position: center;
@@ -143,6 +146,7 @@ nav img {
   max-height: 800px;
   margin-bottom: 40px;
 }
+
 
 .gallery-text h2 {
   font-family: 'Playfair Display', serif;
@@ -886,36 +890,13 @@ nav img {
   position: relative;
 }
 
-.contact-form,
 .contact-info {
   flex: 1;
   min-width: 300px;
   max-width: 500px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 
-input,
-textarea {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-button {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 .contact-info h2 {
   font-family: 'Playfair Display', serif;
@@ -1012,7 +993,7 @@ button {
   .swiper {
     max-height: 80vh;
   }
-
+  
   .contact-button {
     font-size: 16px;
     padding: 12px 25px;
