@@ -4,14 +4,12 @@
   --accent-color: #d4af37;
   --overlay: rgba(0, 0, 0, 0.5);
 }
-
 /* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /* ====== INDEX ====== */
 body {
   font-family: 'Roboto', sans-serif;
@@ -19,7 +17,6 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
 }
-
 /* Preloader */
 #preloader {
   position: fixed;
@@ -33,15 +30,12 @@ body {
   align-items: center;
   z-index: 9999;
   transition: opacity 0.5s ease;
-
 }
-
 #preloader img {
   width: 48px;
   height: auto;
   display: block;
 }
-
 /*Hero Section */
 header {
   background-image: url('../images/image14.jpg');
@@ -54,7 +48,6 @@ header {
   align-items: flex-end;
   padding-bottom: 80px;
 }
-
 /* background peste poza*/
 header::before {
   content: "";
@@ -63,18 +56,15 @@ header::before {
   background-color: var(--overlay);
   z-index: 1;
 }
-
 .header-content {
   z-index: 2;
   text-align: center;
 }
-
 .header-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 80px;
   font-weight: bold;
 }
-
 .slogan-box {
   background: var(--accent-color);
   color: black;
@@ -85,7 +75,6 @@ header::before {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   display: inline-block;
 }
-
 /* Navbar Styles */
 nav {
   position: fixed;
@@ -99,22 +88,18 @@ nav {
   padding: 20px 50px;
   z-index: 10000;
 }
-
 nav img {
   height: 100px;
 }
-
 .nav-links {
   display: flex;
   gap: 25px;
 }
-
 .nav-links a {
   text-decoration: none;
   color: var(--text-color);
   font-size: 20px;
 }
-
 /* Hamburger (mobile) */
 .hamburger {
   display: none;
@@ -122,7 +107,6 @@ nav img {
   color: white;
   cursor: pointer;
 }
-
 /* Slider (galerie) */
 .gallery-section {
   background: rgb(247, 247, 245);
@@ -136,35 +120,30 @@ nav img {
   box-sizing: border-box;
   display: block;
 }
-
 .swiper {
   width: 100%;
   height: 100vh;
   max-height: 800px;
   margin-bottom: 40px;
 }
-
 .gallery-text h2 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   margin-bottom: 10px;
   color: rgb(0, 0, 0);
 }
-
 .gallery-text p {
   font-size: 18px;
   max-width: 700px;
   margin: 0 auto 40px;
   color: #000000;
 }
-
 /* Butoane / Call to Action */
 .gallery-button-wrapper {
   text-align: center;
   margin-top: 100px;
   margin-top: 20px;
 }
-
 .contact-button {
   background-color: var(--accent-color);
   color: rgb(0, 0, 0);
@@ -175,12 +154,10 @@ nav img {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
-
 .contact-button:hover {
   background-color: #c19e33;
   transform: scale(1.05);
 }
-
 /* Highlight /poza mare de la contact */
 .highlight-section {
   position: relative;
@@ -195,7 +172,6 @@ nav img {
   text-align: center;
   padding: 40px 20px;
 }
-
 .highlight-section .overlay {
   position: absolute;
   inset: 0;
@@ -203,24 +179,20 @@ nav img {
   /* întunecare imagine */
   z-index: 1;
 }
-
 .highlight-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
 }
-
 .highlight-content h2 {
   font-size: 36px;
   font-family: 'Playfair Display', serif;
   margin-bottom: 20px;
 }
-
 .highlight-content p {
   font-size: 18px;
   margin-bottom: 30px;
 }
-
 /* Footer */
 .footer {
   background: #454545;
@@ -229,7 +201,6 @@ nav img {
   padding: 15px;
   font-size: 14px;
 }
-
 /* ====== DESPRE ====== */
 .hero-despre {
   background-image: url('../images/image10.jpg');
@@ -243,7 +214,6 @@ nav img {
   text-align: center;
   padding-bottom: 120px;
 }
-
 .hero-despre::before {
   content: "";
   position: absolute;
@@ -255,72 +225,60 @@ nav img {
   /* overlay */
   z-index: 1;
 }
-
 .despre-info {
   background-color: #f5f5f5;
   padding: 80px 40px;
   text-align: center;
   color: #111;
 }
-
 .despre-info .container {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .despre-info h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   margin-bottom: 50px;
 }
-
 .columns {
   display: flex;
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
 }
-
 .col {
   flex: 1;
   min-width: 280px;
 }
-
 .col h3 {
   font-size: 22px;
   margin-bottom: 15px;
   font-weight: bold;
 }
-
 .col p {
   font-size: 16px;
   line-height: 1.6;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 20px;
 }
-
 .hero-content h1 {
   font-size: 60px;
   font-family: 'Playfair Display', serif;
   margin-bottom: 20px;
 }
-
 .hero-content p {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
-
 .founder-section {
   background-color: transparent;
   color: black;
   padding: 80px 20px;
 }
-
 .founder-container {
   display: flex;
   align-items: center;
@@ -330,7 +288,6 @@ nav img {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .founder-image img {
   width: 100%;
   max-width: 450px;
@@ -338,32 +295,26 @@ nav img {
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
-
 .founder-image img:hover {
   opacity: 1;
 }
-
 .founder-text {
   max-width: 600px;
 }
-
 .founder-text h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   margin-bottom: 20px;
 }
-
 .founder-text p {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 1.6;
 }
-
 .beneficii-section {
   background-color: #fafafa;
   padding: 80px 20px;
 }
-
 .beneficii-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -371,7 +322,6 @@ nav img {
   max-width: 1000px;
   margin: 0 auto;
 }
-
 .beneficiu-card {
   background-color: white;
   border-radius: 15px;
@@ -380,11 +330,9 @@ nav img {
   text-align: center;
   transition: transform 0.3s ease;
 }
-
 .beneficiu-card:hover {
   transform: translateY(-8px);
 }
-
 .icon-box {
   width: 80px;
   height: 80px;
@@ -396,34 +344,28 @@ nav img {
   justify-content: center;
   transition: background-color 0.3s ease;
 }
-
 .beneficiu-card:hover .icon-box {
   background-color: #c59d5f;
   /* culoarea accent */
 }
-
 .icon-box img {
   width: 40px;
   transition: transform 0.3s ease;
 }
-
 .beneficiu-card:hover .icon-box img {
   transform: scale(1.1);
 }
-
 .beneficiu-card h3 {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
   color: #222;
 }
-
 .beneficiu-card p {
   font-size: 15px;
   color: #444;
   line-height: 1.6;
 }
-
 .contact-cta {
   background: rgba(0, 0, 0, 0.75);
   color: white;
@@ -431,18 +373,15 @@ nav img {
   text-align: center;
   margin-top: 80px;
 }
-
 .contact-cta h2 {
   font-size: 40px;
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
 }
-
 .contact-cta p {
   font-size: 18px;
   margin-bottom: 30px;
 }
-
 .btn-cta {
   background-color: #c59d5f;
   color: white;
@@ -453,11 +392,9 @@ nav img {
   text-transform: uppercase;
   transition: background 0.3s ease;
 }
-
 .btn-cta:hover {
   background-color: #a37f47;
 }
-
 /* ====== SERVICII ====== */
 .hero-servicii {
   height: 91.5vh;
@@ -469,7 +406,6 @@ nav img {
   text-align: center;
   padding-bottom: 120px;
 }
-
 .hero-serv-cont {
   font-size: 20px;
   max-width: 700px;
@@ -477,7 +413,6 @@ nav img {
   position: relative;
   z-index: 1;
 }
-
 .hero-servicii::before {
   content: "";
   position: absolute;
@@ -488,29 +423,24 @@ nav img {
   background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
-
 .hero-serv-cont h1 {
   font-size: 60px;
   font-family: 'Playfair Display', serif;
 }
-
 .packages-section {
   padding: 4rem 2rem;
   text-align: center;
   color: black;
 }
-
 .packages-section h2 {
   font-size: 2rem;
   margin-bottom: 3rem;
 }
-
 .packages-grid {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-
 .package-card {
   background: #ffffff;
   padding: 2rem;
@@ -518,27 +448,22 @@ nav img {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
-
 .package-card:hover {
   transform: translateY(-5px);
 }
-
 .package-card .icon {
   margin-bottom: 1rem;
   color: #2e2e2e;
 }
-
 .package-card h3 {
   font-size: 20px;
   margin-bottom: 1rem;
 }
-
 .package-card ul {
   list-style: none;
   padding: 0;
   margin-bottom: 1.5rem;
 }
-
 .package-card li {
   font-size: 16px;
   margin-bottom: 1rem;
@@ -546,7 +471,6 @@ nav img {
   text-align: center;
   font-weight: bold;
 }
-
 .cta-button {
   background: #c59d5f;
   color: #fff;
@@ -556,11 +480,9 @@ nav img {
   font-weight: bold;
   transition: background 0.3s ease;
 }
-
 .cta-button:hover {
   background: #747474;
 }
-
 .servicii-wrapper {
   display: flex;
   flex-direction: column;
@@ -569,7 +491,6 @@ nav img {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-
 .servicii-col {
   background: #fff;
   padding: 2rem;
@@ -577,7 +498,6 @@ nav img {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   width: 100%;
 }
-
 .servicii-col h3 {
   font-size: 24px;
   margin-bottom: 1rem;
@@ -585,13 +505,11 @@ nav img {
   text-align: center;
   font-weight: bold;
 }
-
 .servicii-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .servicii-col li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #eee;
@@ -600,9 +518,7 @@ nav img {
   text-align: center;
   font-weight: bold;
 }
-
 .section-subtitle {
-
   margin-top: -80px;
   /* micșorează dacă e prea mare */
   margin-bottom: 40px;
@@ -612,10 +528,7 @@ nav img {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-
-
 }
-
 .whatsapp-button {
   display: inline-flex;
   align-items: center;
@@ -629,39 +542,32 @@ nav img {
   margin-top: 0.5rem;
   font-size: 0.95rem;
 }
-
 .whatsapp-button:hover {
   background-color: #1ebe5d;
 }
-
 .whatsapp-button svg {
   fill: white;
 }
-
 .packages-section {
   padding: 40px 24 px 64 px 24 px;
   text-align: center;
   color: black;
 }
-
 .package-card p {
   font-size: 20px;
   margin-bottom: 1rem;
   color: #555;
 }
-
 .servicii-intro-img {
   text-align: center;
   margin: 3rem auto;
 }
-
 .servicii-intro-img img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
 /* ====== PORTOFOLIU ====== */
 .hero {
   height: 100vh;
@@ -673,7 +579,6 @@ nav img {
   text-align: center;
   padding-bottom: 120px;
 }
-
 .hero::after {
   content: "";
   position: absolute;
@@ -684,7 +589,6 @@ nav img {
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
-
 .hero h1 {
   font-size: 60px;
   font-family: 'Playfair Display', serif;
@@ -692,7 +596,6 @@ nav img {
   position: relative;
   z-index: 1;
 }
-
 .hero p {
   font-size: 20px;
   max-width: 1000px;
@@ -700,29 +603,23 @@ nav img {
   position: relative;
   z-index: 1;
 }
-
 .section-title {
   padding: 100px 20px 50px;
   background-color: rgb(247, 247, 245);
   text-align: center;
   color: #111;
   padding-top: 20px;
-
 }
-
 .section-title h2 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   margin-bottom: 20px;
 }
-
 .section-title p {
   font-size: 20px;
   max-width: 800px;
   margin: 0 auto;
-
 }
-
 .gallery-trio {
   display: flex;
   width: 100%;
@@ -730,12 +627,10 @@ nav img {
   background-color: rgb(247, 247, 245);
   padding: 40px 0;
 }
-
 .gallery-col {
   flex: 1;
   overflow: hidden;
 }
-
 .gallery-col img,
 .gallery-col .swiper {
   width: 100%;
@@ -743,32 +638,27 @@ nav img {
   object-fit: cover;
   display: block;
 }
-
 .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0;
 }
-
 .galerie-finala {
   padding: 60px 20px;
   background-color: #c8c399;
   text-align: center;
   color: #111;
 }
-
 .galerie-finala h2 {
   font-size: 42px;
   font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
 }
-
 .galerie-finala p {
   font-size: 18px;
   margin-bottom: 40px;
 }
-
 .grid-galerie {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -777,7 +667,6 @@ nav img {
   margin: 0 auto;
   padding-top: 60px;
 }
-
 .grid-galerie img {
   width: 100%;
   height: 200px;
@@ -786,15 +675,12 @@ nav img {
   transition: transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.30);
 }
-
 .grid-galerie img:hover {
   transform: scale(1.05);
 }
-
 .gallery-mobile {
   display: none;
 }
-
 .wave-divider {
   position: relative;
   height: 100px;
@@ -802,13 +688,10 @@ nav img {
   line-height: 0;
   z-index: 2;
   margin-top: 0px;
-
 }
-
 .wave-divider svg path {
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5));
 }
-
 .wave-divider svg {
   display: block;
   width: 100%;
@@ -816,7 +699,6 @@ nav img {
   transform: scalex(1.2);
   transform-origin: center;
 }
-
 .val-peste {
   position: relative;
   z-index: 10;
@@ -825,20 +707,16 @@ nav img {
   pointer-events: none;
   /* ca să nu blocheze click-uri */
 }
-
 .val-peste svg {
   display: block;
   width: 100%;
   height: 90px;
   margin-left: 0;
 }
-
 .val-peste svg path {
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
 }
-
 /* ====== CONTACT ====== */
-
 .hero-contact {
   background-image: url('../images/image10.jpg');
   background-size: cover;
@@ -850,7 +728,6 @@ nav img {
   justify-content: center;
   text-align: center;
 }
-
 .hero-contact::before {
   content: "";
   position: absolute;
@@ -861,18 +738,15 @@ nav img {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
 .hero-contact-content {
   position: relative;
   z-index: 2;
   color: rgb(255, 255, 255);
 }
-
 .hero-contact-content h1 {
   font-size: 60px;
   font-family: 'Playfair Display', serif;
 }
-
 .contact-section {
   margin-top: -200px;
   padding: 80px 40px;
@@ -885,94 +759,56 @@ nav img {
   z-index: 3;
   position: relative;
 }
-
-.contact-form,
 .contact-info {
   flex: 1;
   min-width: 300px;
   max-width: 500px;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input,
-textarea {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-button {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .contact-info h2 {
   font-family: 'Playfair Display', serif;
   font-size: 30px;
   margin-bottom: 20px;
 }
-
 .contact-info p {
   font-size: 20px;
   margin-bottom: 15px;
   font-weight: bold;
 }
-
 .contact-info img {
   width: 20px;
   vertical-align: middle;
   margin-right: 10px;
 }
-
 .contact-info a {
   color: #111;
   text-decoration: none;
   font-weight: bold;
 }
-
 /* Responsive: Mobile Styles */
 @media (max-width: 768px) {
-
   nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
   }
-
   nav img {
     height: 70px;
     align-self: flex-start;
-  }
-
+ }
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     gap: 10px;
     padding: 10px 0;
-    text-align: center;
-
+   text-align: center;
   }
-
   .nav-links.show {
     display: flex;
   }
-
   .nav-links a {
     font-size: 24px;
   }
-
   .hamburger {
     display: block;
     position: absolute;
@@ -985,151 +821,118 @@ button {
     color: white;
     align-self: center;    
     }
-
   .header-content h1 {
     font-size: 40px;
   }
-
   .slogan-box {
     font-size: 14px;
     padding: 10px 15px;
   }
-
   .gallery-section {
     padding: 40px 0 60px;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
   }
-
   .gallery-text h2 {
     font-size: 28px;
   }
-
   .gallery-text p {
     font-size: 16px;
   }
-
   .swiper {
     max-height: 80vh;
   }
-
   .contact-button {
     font-size: 16px;
     padding: 12px 25px;
     border-radius: 10px;
   }
-
   #preloader img {
     width: 100px;
   }
-
   /* css mobile pentru despre */
   .hero-despre {
     padding-top: 100px;
     height: 91.5vh;
   }
-
   .hero-content h1 {
     font-size: 36px;
   }
-
   .hero-content p {
     font-size: 16px;
   }
-
   .despre-info {
     padding: 60px 20px;
   }
-
   .despre-info h2 {
     font-size: 28px;
   }
-
   .columns {
     flex-direction: column;
     gap: 30px;
   }
-
   .col h3 {
     font-size: 20px;
   }
-
   .col p {
     font-size: 15px;
   }
-
   .founder-container {
     flex-direction: column;
     gap: 30px;
     padding: 0 20px;
     align-items: center;
   }
-
   .founder-image img {
     max-width: 100%;
   }
-
   .founder-text {
     text-align: center;
   }
-
   .founder-text h2 {
     font-size: 26px;
   }
-
   .founder-text p {
     font-size: 16px;
   }
-
   .beneficii-container {
     grid-template-columns: 1fr;
   }
-
   .beneficiu-card {
     padding: 20px;
   }
-
   .beneficiu-card h3 {
     font-size: 18px;
   }
-
   .beneficiu-card p {
     font-size: 15px;
   }
-
   .contact-cta h2 {
     font-size: 30px;
   }
-
   .btn-cta {
     font-size: 14px;
     padding: 10px 20px;
   }
-
   .contact-cta {
     padding-top: 40px;
     padding-bottom: 60px;
     margin-top: 20px;
   }
-
   .beneficii-section {
     padding-top: 40px;
     padding-bottom: 60px;
   }
-
   .founder-section {
     padding-bottom: 30px;
   }
-
   /* ====== CS MOBILE SERVICII ======*/
   .servicii-wrapper {
     flex-direction: row;
   }
-
   .servicii-col {
     width: 50%;
   }
-
   /* css mobile portofoliu */
   /* HERO */
   .hero {
@@ -1142,24 +945,20 @@ button {
     text-align: center;
     padding-bottom: 80px;
   }
-
   .hero h1 {
     font-size: 40px;
     margin-bottom: 20px;
   }
-
   .hero p {
     font-size: 20px;
     max-width: 98%;
     line-height: 1.0;
   }
-
   /* SPAȚIU UNIFORM ÎNTRE SECȚIUNI */
   .section-title {
     margin-top: -10px;
     padding-top: 0px;
   }
-
   /* TITLURI ȘI SUBTITLURI */
   .section-title h2 {
     font-size: 25px;
@@ -1167,25 +966,20 @@ button {
     line-height: 1.4;
     text-align: center;
   }
-
   .section-title p {
     font-size: 15px;
     text-align: center;
   }
-
-
   /* CARUSEL CENTRAL PE MOBIL */
   .gallery-mobile {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     display: block;
   }
-
   .gallery-trio {
     display: none;
     /* ascunde varianta desktop */
   }
-
   /* GALERIE FINALĂ IMAGINI PE LUNGIMEA ECRANULUI */
   .grid-galerie {
     display: grid;
@@ -1193,7 +987,6 @@ button {
     gap: 5px;
     padding-top: 40px;
   }
-
   .grid-galerie img {
     width: 100%;
     height: 100%;
@@ -1202,8 +995,4 @@ button {
     object-fit: cover;
     object-position: center;
   }
-
-
-
-
 }
