@@ -8,21 +8,39 @@ window.addEventListener("load", function () {
 });
 
 // Background slideshow  
-    const header = document.querySelector("header");
-    if (header) {
-      const images = [
-      "images/image14.webp","images/image4.jpg", "images/image10.jpg",
-      "images/image12.jpg", "images/image13.jpg", "images/image15.jpg"
-    ];
-    let current = 0;
+const fader1 = document.querySelector(".fader1");
+const fader2 = document.querySelector(".fader2");
 
-    function changeBackground() {
-      current = (current + 1) % images.length;
-      header.style.backgroundImage = "url('" + images[current] + "')";
-    }
-    header.style.backgroundImage = "url('" + images[0] + "')";
-    setInterval(changeBackground, 2000); }  
+const images = [
+  "images/image14.webp", "images/image4.jpg", "images/image10.jpg",
+  "images/image12.jpg", "images/image13.jpg", "images/image15.jpg"
+];
 
+let current = 0;
+let showingFader1 = true;
+
+function changeBackground() {
+  current = (current + 1) % images.length;
+
+  if (showingFader1) {
+    fader2.style.backgroundImage = `url('${images[current]}')`;
+    fader2.style.opacity = 1;
+    fader1.style.opacity = 0;
+  } else {
+    fader1.style.backgroundImage = `url('${images[current]}')`;
+    fader1.style.opacity = 1;
+    fader2.style.opacity = 0;
+  }
+
+  showingFader1 = !showingFader1;
+}
+
+// Setează prima imagine
+fader1.style.backgroundImage = `url('${images[0]}')`;
+fader1.style.opacity = 1;
+
+// Pornește slideshow-ul
+setInterval(changeBackground, 5000);
 // 🌀 Swiper – Doar dacă există clasa .mySwiper
 if (document.querySelector('.mySwiper')) {
   new Swiper(".mySwiper", {

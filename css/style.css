@@ -1,6 +1,4 @@
 /* Variabile / root */
-
-
 :root {
   --text-color: white;
   --accent-color: #d4af37;
@@ -38,46 +36,6 @@ body {
   height: auto;
   display: block;
 }
-/*Hero Section */
-
-header {
-  background-image: url('../images/image14.webp');
-  height: 91.5vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 80px;
-}
-/* background peste poza*/
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--overlay);
-  z-index: 1;
-}
-.header-content {
-  z-index: 2;
-  text-align: center;
-}
-.header-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 80px;
-  font-weight: bold;
-}
-.slogan-box {
-  background: var(--accent-color);
-  color: black;
-  padding: 12px 25px;
-  border-radius: 10px;
-  font-size: 18px;
-  margin-top: 5px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  display: inline-block;
-}
 /* Navbar Styles */
 nav {
   position: fixed;
@@ -110,6 +68,63 @@ nav img {
   color: white;
   cursor: pointer;
 }
+/*Hero Section */
+.header-content {
+  z-index: 2;
+  text-align: center;
+  position: relative;
+}
+.header-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  font-weight: bold;
+}
+.slogan-box {
+  background: var(--accent-color);
+  color: black;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 5px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  pointer-events: none;
+}
+header {
+  height: 91.5vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  transition: background-image 1s easy-in-out;
+  overflow: hidden;
+}
+.fader {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+.fader1 {
+  z-index: 0;
+}
+.fader2 {
+  z-index: 0
+}
 /* Slider (galerie) */
 .gallery-section {
   background: rgb(247, 247, 245);
@@ -129,8 +144,6 @@ nav img {
   max-height: 800px;
   margin-bottom: 40px;
 }
-
-
 .gallery-text h2 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
@@ -764,15 +777,11 @@ nav img {
   z-index: 3;
   position: relative;
 }
-
 .contact-info {
   flex: 1;
   min-width: 300px;
   max-width: 500px;
 }
-
-
-
 .contact-info h2 {
   font-family: 'Playfair Display', serif;
   font-size: 30px;
@@ -803,14 +812,14 @@ nav img {
   nav img {
     height: 70px;
     align-self: flex-start;
- }
+  }
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     gap: 10px;
     padding: 10px 0;
-   text-align: center;
+    text-align: center;
   }
   .nav-links.show {
     display: flex;
@@ -828,8 +837,8 @@ nav img {
     z-index: 10001;
     cursor: pointer;
     color: white;
-    align-self: center;    
-    }
+    align-self: center;
+  }
   .header-content h1 {
     font-size: 40px;
   }
@@ -851,7 +860,6 @@ nav img {
   .swiper {
     max-height: 80vh;
   }
-  
   .contact-button {
     font-size: 16px;
     padding: 12px 25px;
@@ -943,9 +951,9 @@ nav img {
   .servicii-col {
     width: 50%;
   }
-    .packages-grid {
-  grid-template-columns: 1fr;}
-
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
   /* css mobile portofoliu */
   /* HERO */
   .hero {
