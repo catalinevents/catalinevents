@@ -9,7 +9,8 @@ window.addEventListener("load", function () {
 
 // Background slideshow  
     const header = document.querySelector("header");
-    const images = [
+    if (header) {
+      const images = [
       "images/image14.webp","images/image4.jpg", "images/image10.jpg",
       "images/image12.jpg", "images/image13.jpg", "images/image15.jpg"
     ];
@@ -20,7 +21,7 @@ window.addEventListener("load", function () {
       header.style.backgroundImage = "url('" + images[current] + "')";
     }
     header.style.backgroundImage = "url('" + images[0] + "')";
-    setInterval(changeBackground, 2000);  
+    setInterval(changeBackground, 2000); }  
 
 // 🌀 Swiper – Doar dacă există clasa .mySwiper
 if (document.querySelector('.mySwiper')) {
