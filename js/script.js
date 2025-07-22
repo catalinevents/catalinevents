@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
       header.style.backgroundImage = "url('" + images[current] + "')";
     }
     header.style.backgroundImage = "url('" + images[0] + "')";
-    setInterval(changeBackground, 5000);  
+    setInterval(changeBackground, 2000);  
 
 // 🌀 Swiper – Doar dacă există clasa .mySwiper
 if (document.querySelector('.mySwiper')) {
