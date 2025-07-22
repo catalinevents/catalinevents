@@ -7,7 +7,20 @@ window.addEventListener("load", function () {
   }, 500);
 });
 
+// Background slideshow  
+    const header = document.querySelector("header");
+    const images = [
+      "images/image14.webp","images/image4.jpg", "images/image10.jpg",
+      "images/image12.jpg", "images/image13.jpg", "images/image15.jpg"
+    ];
+    let current = 0;
 
+    function changeBackground() {
+      current = (current + 1) % images.length;
+      header.style.backgroundImage = "url('" + images[current] + "')";
+    }
+    header.style.backgroundImage = "url('" + images[0] + "')";
+    setInterval(changeBackground, 5000);  
 
 // 🌀 Swiper – Doar dacă există clasa .mySwiper
 if (document.querySelector('.mySwiper')) {
