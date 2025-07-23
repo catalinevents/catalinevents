@@ -159,8 +159,7 @@ header {
 /* Butoane / Call to Action */
 .gallery-button-wrapper {
   text-align: center;
-  margin-top: 100px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .contact-button {
   background-color: var(--accent-color);
@@ -171,10 +170,52 @@ header {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-}
+ }
 .contact-button:hover {
   background-color: #c19e33;
   transform: scale(1.05);
+  }
+  .servicii-preview {
+  text-align: center;
+  padding: 40px 20px;
+  padding-bottom: 60px;
+}
+
+.servicii-preview h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.servicii-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.serviciu-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviciu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+.serviciu-card h3 {
+  font-size: 1.4rem;
+  color: #c59d5f;
+  margin-bottom: 10px;
+}
+
+.serviciu-card p {
+  font-size: 1rem;
+  color: #333;
 }
 /* Highlight /poza mare de la contact */
 .highlight-section {
@@ -210,6 +251,15 @@ header {
 .highlight-content p {
   font-size: 18px;
   margin-bottom: 30px;
+  }
+  .semnatura-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100px; /* mică și discretă */
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 2; /* deasupra overlay-ului */
 }
 /* Footer */
 .footer {
@@ -219,6 +269,7 @@ header {
   padding: 15px;
   font-size: 14px;
 }
+
 /* ====== DESPRE ====== */
 .hero-despre {
   background-image: url('../images/image10.jpg');
@@ -868,6 +919,11 @@ header {
   #preloader img {
     width: 100px;
   }
+   .servicii-grid {
+    grid-template-columns: 1fr; /* una pe rând */
+    gap: 15px; /* poți ajusta spațiul între ele */
+  }
+
   /* css mobile pentru despre */
   .hero-despre {
     padding-top: 100px;
