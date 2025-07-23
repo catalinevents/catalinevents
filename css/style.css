@@ -74,10 +74,12 @@ nav img {
   text-align: center;
   position: relative;
 }
+/* Titlurile tuturor paginilor "header-content h1" */
 .header-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 80px;
   font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(0, 0, 0, 0.7);
 }
 .slogan-box {
   background: var(--accent-color);
@@ -93,7 +95,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 1;
   pointer-events: none;
 }
@@ -337,11 +339,7 @@ header {
   max-width: 800px;
   padding: 20px;
 }
-.hero-content h1 {
-  font-size: 60px;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 20px;
-}
+
 .hero-content p {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
@@ -495,10 +493,7 @@ header {
   background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
-.hero-serv-cont h1 {
-  font-size: 60px;
-  font-family: 'Playfair Display', serif;
-}
+
 .packages-section {
   padding: 4rem 2rem;
   text-align: center;
@@ -663,13 +658,7 @@ header {
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
-.hero h1 {
-  font-size: 60px;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
-}
+
 .hero p {
   font-size: 20px;
   max-width: 1000px;
@@ -817,10 +806,7 @@ header {
   z-index: 2;
   color: rgb(255, 255, 255);
 }
-.hero-contact-content h1 {
-  font-size: 60px;
-  font-family: 'Playfair Display', serif;
-}
+
 .contact-section {
   margin-top: -200px;
   padding: 80px 40px;
@@ -896,7 +882,7 @@ header {
     align-self: center;
   }
   .header-content h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
   .slogan-box {
     font-size: 14px;
@@ -934,9 +920,7 @@ header {
     padding-top: 100px;
     height: 91.5vh;
   }
-  .hero-content h1 {
-    font-size: 36px;
-  }
+  
   .hero-content p {
     font-size: 16px;
   }
@@ -1027,10 +1011,7 @@ header {
     text-align: center;
     padding-bottom: 80px;
   }
-  .hero h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
+  
   .hero p {
     font-size: 20px;
     max-width: 98%;
