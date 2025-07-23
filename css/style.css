@@ -95,7 +95,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   pointer-events: none;
 }
@@ -225,7 +225,7 @@ header {
 /* Highlight /poza mare de la contact */
 .highlight-section {
   position: relative;
-  background-image: url('../images/image9.jpg');
+  background-image: url('../images/image9.webp');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -277,7 +277,7 @@ header {
 
 /* ====== DESPRE ====== */
 .hero-despre {
-  background-image: url('../images/image10.jpg');
+  background-image: url('../images/image10.webp');
   background-size: cover;
   background-position: center;
   height: 91.5vh;
@@ -468,7 +468,7 @@ header {
 /* ====== SERVICII ====== */
 .hero-servicii {
   height: 91.5vh;
-  background: url('../images/hero-servicii.jpg') top/cover no-repeat;
+  background: url('../images/hero-servicii.webp') top/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -640,7 +640,7 @@ header {
 /* ====== PORTOFOLIU ====== */
 .hero {
   height: 100vh;
-  background: url('../images/image16.jpg') center/cover no-repeat;
+  background: url('../images/image16.webp') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -781,7 +781,7 @@ header {
 }
 /* ====== CONTACT ====== */
 .hero-contact {
-  background-image: url('../images/image10.jpg');
+  background-image: url('../images/image10.webp');
   background-size: cover;
   background-position: center;
   height: 70vh;

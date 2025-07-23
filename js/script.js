@@ -13,8 +13,8 @@ const fader2 = document.querySelector(".fader2");
 
 if (fader1 && fader2) {
   const images = [
-    "images/image14.webp", "images/image4.jpg", "images/image10.jpg",
-    "images/image12.jpg", "images/image13.jpg", "images/image15.jpg"
+    "images/image14.webp", "images/image4.webp", "images/image10.webp",
+    "images/image12.webp", "images/image13.webp", "images/image15.webp"
   ];
 
   let current = 0;
