@@ -178,8 +178,7 @@ header {
   .servicii-preview {
   text-align: center;
   padding: 40px 20px;
-  padding-bottom: 60px;
-}
+  }
 
 .servicii-preview h2 {
   font-size: 2rem;
@@ -216,6 +215,10 @@ header {
 .serviciu-card p {
   font-size: 1rem;
   color: #333;
+}
+.servicii-button-wrapper {
+  text-align: center;
+  margin-top: 100px;
 }
 /* Highlight /poza mare de la contact */
 .highlight-section {
