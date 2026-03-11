@@ -183,8 +183,10 @@ header {
   }
 
 .servicii-preview h2 {
-  font-size: 2rem;
+  font-family:'Playfair Display', serif;
+  font-size: 48px;
   margin-bottom: 40px;
+  color:rgb(0, 0, 0)
 }
 
 .servicii-grid {
