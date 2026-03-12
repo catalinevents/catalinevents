@@ -151,7 +151,7 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   margin-bottom: 10px;
-  color: rgb(0, 0, 0);
+  color:#222
 }
 .gallery-text p {
   font-size: 18px;
@@ -187,7 +187,7 @@ header {
   font-family:'Playfair Display', serif;
   font-size: 48px;
   margin-bottom: 40px;
-  color:rgb(0, 0, 0)
+  color:#222;
 }
 
 .servicii-grid {
@@ -213,7 +213,7 @@ header {
 }
 .serviciu-card h3 {
   font-size: 1.4rem;
-  color: #c6a25a;
+  color: #222;
   margin-bottom: 10px;
 }
 
