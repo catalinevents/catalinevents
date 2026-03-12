@@ -202,7 +202,7 @@ header {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  border-top:3px solid #b8934e;
+  border-top:2px solid #c6a25a;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -213,7 +213,7 @@ header {
 }
 .serviciu-card h3 {
   font-size: 1.4rem;
-  color: #b8934e;
+  color: #c6a25a;
   margin-bottom: 10px;
 }
 
