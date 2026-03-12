@@ -117,23 +117,26 @@
   <section class="servicii-preview">
       <h2>Serviciile noastre</h2>
       <div class="servicii-grid">
-        <div class="serviciu-card">
-          <h3>Filmări la calitate 4K</h3>
-          <p>Capturăm fiecare moment în detalii impresionante, cu echipamente de ultimă generație.</p>
-        </div>
-        <div class="serviciu-card">
-          <h3>Fotografie Profesională</h3>
-          <p>Imagini clare, pline de emoție, surprinse cu atenție la fiecare detaliu.</p>
-        </div>
-        <div class="serviciu-card">
-          <h3>Efecte Speciale</h3>
-          <p>Fum greu, oglindă&cabină foto și alte elemente care transformă evenimentul tău.</p>
-        </div>
-        <div class="serviciu-card">
-          <h3>Albume Personalizate</h3>
-          <p>Albume foto premium, gândite pentru amintiri care durează o viață.</p>
-        </div>
-      </div>
+  <div class="serviciu-card" data-type="video" data-src="images/filmare4k.mp4">
+    <h3>Filmări la calitate 4K</h3>
+    <p>Capturăm fiecare moment în detalii impresionante, cu echipamente de ultimă generație.</p>
+  </div>
+
+  <div class="serviciu-card" data-type="image" data-src="images/fotografie-profesionala.webp">
+    <h3>Fotografie Profesională</h3>
+    <p>Imagini clare, pline de emoție, surprinse cu atenție la fiecare detaliu.</p>
+  </div>
+
+  <div class="serviciu-card" data-type="image" data-src="images/fum-greu.webp">
+    <h3>Efecte Speciale</h3>
+    <p>Fum greu, oglindă&cabină foto și alte elemente care transformă evenimentul tău.</p>
+  </div>
+
+  <div class="serviciu-card" data-type="image" data-src="images/album-personalizat.webp">
+    <h3>Albume Personalizate</h3>
+    <p>Albume foto premium, gândite pentru amintiri care durează o viață.</p>
+  </div>
+</div>
       <div class="servicii-button-wrapper">
   <a href="servicii.html" class="contact-button">Vezi toate serviciile și pachetele</a>
 </div>
@@ -155,6 +158,12 @@
       &copy; 2026 Cătălin Events. Toate drepturile rezervate.
     </div>
   </footer>
+  <div id="serviciu-modal" class="serviciu-modal">
+  <div class="serviciu-modal-box">
+    <button id="closeModal" class="close-modal">&times;</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>

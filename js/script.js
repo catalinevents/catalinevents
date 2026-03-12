@@ -115,3 +115,46 @@ function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
   navLinks.classList.toggle("show");
 }
+// Popup pentru cardurile din Servicii
+const serviciuCards = document.querySelectorAll(".serviciu-card");
+const serviciuModal = document.getElementById("serviciu-modal");
+const modalContent = document.getElementById("modalContent");
+const closeModal = document.getElementById("closeModal");
+
+if (serviciuCards.length && serviciuModal && modalContent && closeModal) {
+  serviciuCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const type = card.getAttribute("data-type");
+      const src = card.getAttribute("data-src");
+
+      if (!type || !src) return;
+
+      if (type === "image") {
+        modalContent.innerHTML = `<img src="${src}" alt="Imagine serviciu">`;
+      }
+
+      if (type === "video") {
+        modalContent.innerHTML = `
+          <video controls autoplay>
+            <source src="${src}" type="video/mp4">
+            Browserul tău nu suportă redarea video.
+          </video>
+        `;
+      }
+
+      serviciuModal.classList.add("active");
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    serviciuModal.classList.remove("active");
+    modalContent.innerHTML = "";
+  });
+
+  serviciuModal.addEventListener("click", (e) => {
+    if (e.target === serviciuModal) {
+      serviciuModal.classList.remove("active");
+      modalContent.innerHTML = "";
+    }
+  });
+}
