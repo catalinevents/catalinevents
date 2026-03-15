@@ -136,6 +136,7 @@ header {
   background-repeat: no-repeat;
   transition: opacity 1s ease-in-out;
   opacity: 0;
+  
 }
 
 .fader1 {

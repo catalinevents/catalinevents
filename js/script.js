@@ -1,5 +1,5 @@
 // 🔄 Preloader
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
   preloader.style.opacity = "0";
   setTimeout(() => {
