@@ -142,6 +142,7 @@ header {
 
 .fader1 {
   z-index: 0;
+  opacity: 1
 }
 
 .fader2 {
