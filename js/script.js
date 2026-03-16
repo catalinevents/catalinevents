@@ -158,3 +158,18 @@ if (serviciuCards.length && serviciuModal && modalContent && closeModal) {
     }
   });
 }
+
+// ✅ Shared wave SVG for all pages
+function initWaveDivider() {
+  const waveHtml = `
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,0 C480,80 960,0 1440,80 L1440,0 L0,0 Z" fill="white" />
+    </svg>
+  `;
+
+  document.querySelectorAll('.wave-divider').forEach(el => {
+    el.innerHTML = waveHtml;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initWaveDivider);
