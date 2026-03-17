@@ -1314,4 +1314,109 @@ header {
     right: 10px;
     font-size: 30px;
   }
+
+/* BUTON */
+#a11y-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2f6fed, #1e4ed8);
+  color: white;
+  cursor: pointer;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+#a11y-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* PANOU */
+#a11y-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 95px;
+  width: 260px;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  display: none;
+  z-index: 99999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#a11y-panel.open {
+  display: block;
+}
+
+.a11y-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.a11y-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.a11y-actions button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* EFECTE */
+body.a11y-high-contrast {
+  background: black !important;
+  color: white !important;
+}
+
+body.a11y-highlight-links a {
+  text-decoration: underline !important;
+}
+
+body.a11y-no-animations * {
+  animation: none !important;
+  transition: none !important;
+}
+
+body.a11y-grayscale {
+  filter: grayscale(100%);
+}
+
+body.a11y-big-cursor {
+  cursor: pointer;
+}
+
+/* MOBIL */
+@media (max-width: 768px) {
+  #a11y-toggle {
+    width: 54px;
+    height: 54px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  #a11y-panel {
+    right: 14px;
+    bottom: 80px;
+    width: 240px;
+  }
+
+  .a11y-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
 }

@@ -9,6 +9,7 @@
   <link rel="canonical" href="https://catalinevents.ro/despre.html">
   <link rel="alternate" hreflang="ro" href="https://catalinevents.ro/despre.html">
   <link rel="alternate" hreflang="en" href="https://catalinevents.ro/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://catalinevents.ro/">
   <meta name="author" content="Cătălin Events" />
   <title>Despre | Cătălin Events</title>
   <!-- Open Graph META -->
@@ -179,6 +180,389 @@
     &copy; 2026 Cătălin Events. Toate drepturile rezervate.
   </div>
   <script src="js/script.js"></script>
+  <!-- ACCESIBILITATE CATALIN EVENTS -->
+<div id="accessibility-widget">
+  <button id="a11y-toggle" aria-label="Accesibilitate" title="Accesibilitate">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <circle cx="12" cy="5" r="2"></circle>
+      <path d="M12 7c-3 0-5 1-5 1v2h3v3l-2 6h2l2-5 2 5h2l-2-6v-3h3V8s-2-1-5-1z"></path>
+    </svg>
+  </button>
+
+  <div id="a11y-panel" aria-hidden="true">
+    <div class="a11y-header">
+      <strong>Accesibilitate</strong>
+      <button id="a11y-close" aria-label="Închide">×</button>
+    </div>
+
+    <div class="a11y-actions">
+      <button type="button" data-action="increase-text">Text +</button>
+      <button type="button" data-action="decrease-text">Text -</button>
+      <button type="button" data-action="toggle-contrast">Contrast</button>
+      <button type="button" data-action="toggle-links">Linkuri</button>
+      <button type="button" data-action="toggle-animations">Fără animații</button>
+      <button type="button" data-action="toggle-grayscale">Gri</button>
+      <button type="button" data-action="toggle-cursor">Cursor mare</button>
+      <button type="button" data-action="reset">Reset</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #a11y-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #111827, #374151);
+    color: #fff;
+    cursor: pointer;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  #a11y-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(250, 204, 21, 0.35);
+  }
+
+  #a11y-panel {
+    position: fixed;
+    right: 20px;
+    bottom: 95px;
+    width: 290px;
+    max-width: calc(100vw - 24px);
+    background: #1f2937;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    display: none;
+    z-index: 99999;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.26);
+    border: 1px solid #374151;
+  }
+
+  #a11y-panel.open {
+    display: block;
+  }
+
+  .a11y-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .a11y-header strong {
+    font-size: 16px;
+    color: #facc15;
+  }
+
+  #a11y-close {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    color: #facc15;
+  }
+
+  .a11y-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .a11y-actions button {
+    padding: 10px 8px;
+    border: 1px solid #4b5563;
+    border-radius: 10px;
+    background: #111827;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .a11y-actions button:hover {
+    background: #facc15;
+    color: #000000;
+    border-color: #facc15;
+  }
+
+  body.a11y-high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+  }
+
+  body.a11y-high-contrast,
+  body.a11y-high-contrast section,
+  body.a11y-high-contrast div,
+  body.a11y-high-contrast header,
+  body.a11y-high-contrast footer,
+  body.a11y-high-contrast nav,
+  body.a11y-high-contrast main,
+  body.a11y-high-contrast aside {
+    background-image: none !important;
+  }
+
+  body.a11y-high-contrast * {
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  body.a11y-high-contrast a,
+  body.a11y-high-contrast button {
+    color: #ffeb3b !important;
+  }
+
+  body.a11y-highlight-links a {
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    font-weight: 700 !important;
+  }
+
+  body.a11y-no-animations *,
+  body.a11y-no-animations *::before,
+  body.a11y-no-animations *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  body.a11y-grayscale {
+    filter: grayscale(100%);
+  }
+
+  body.a11y-big-cursor,
+  body.a11y-big-cursor * {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='black' d='M3 2l7.5 17 2.1-6.4L19 10z'/><path fill='white' d='M4.6 4.7L11 18.9l1.6-5 5.1-1.9z'/></svg>") 0 0, auto !important;
+  }
+
+  @media (max-width: 768px) {
+    #a11y-toggle {
+      width: 56px;
+      height: 56px;
+      right: 14px;
+      bottom: 14px;
+    }
+
+    #a11y-panel {
+      right: 14px;
+      bottom: 80px;
+      width: 250px;
+    }
+
+    .a11y-actions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const STORAGE_KEY = "siteAccessibilitySettings";
+    const toggleBtn = document.getElementById("a11y-toggle");
+    const panel = document.getElementById("a11y-panel");
+    const closeBtn = document.getElementById("a11y-close");
+    const actionButtons = document.querySelectorAll("#a11y-panel [data-action]");
+
+    const textSelectors = [
+      "p",
+      "li",
+      "a",
+      "span",
+      "strong",
+      "em",
+      "small",
+      "label",
+      "blockquote",
+      "figcaption",
+      "td",
+      "th",
+      "button",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6"
+    ].join(",");
+
+    const defaults = {
+      textScale: 100,
+      highContrast: false,
+      highlightLinks: false,
+      noAnimations: false,
+      grayscale: false,
+      bigCursor: false
+    };
+
+    let settings = loadSettings();
+
+    function loadSettings() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        return { ...defaults, ...saved };
+      } catch (err) {
+        return { ...defaults };
+      }
+    }
+
+    function saveSettings() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+    }
+
+    function getTextElements() {
+      return Array.from(document.querySelectorAll(textSelectors)).filter((el) => {
+        if (!el.textContent || !el.textContent.trim()) return false;
+        if (el.closest("#accessibility-widget")) return false;
+        return true;
+      });
+    }
+
+    function cacheBaseSizes() {
+      getTextElements().forEach((el) => {
+        if (!el.dataset.a11yBaseSize) {
+          const computedSize = window.getComputedStyle(el).fontSize;
+          el.dataset.a11yBaseSize = parseFloat(computedSize);
+        }
+      });
+    }
+
+    function applyTextScale() {
+      cacheBaseSizes();
+
+      getTextElements().forEach((el) => {
+        const base = parseFloat(el.dataset.a11yBaseSize);
+        if (!base || Number.isNaN(base)) return;
+
+        const newSize = (base * settings.textScale) / 100;
+        el.style.fontSize = newSize + "px";
+        el.style.lineHeight = Math.max(newSize * 1.45, 20) + "px";
+      });
+    }
+
+    function applyClassSettings() {
+      document.body.classList.toggle("a11y-high-contrast", settings.highContrast);
+      document.body.classList.toggle("a11y-highlight-links", settings.highlightLinks);
+      document.body.classList.toggle("a11y-no-animations", settings.noAnimations);
+      document.body.classList.toggle("a11y-grayscale", settings.grayscale);
+      document.body.classList.toggle("a11y-big-cursor", settings.bigCursor);
+    }
+
+    function applyAllSettings() {
+      applyTextScale();
+      applyClassSettings();
+      saveSettings();
+    }
+
+    function resetTextScale() {
+      getTextElements().forEach((el) => {
+        el.style.fontSize = "";
+        el.style.lineHeight = "";
+      });
+    }
+
+    function resetAll() {
+      settings = { ...defaults };
+      resetTextScale();
+      document.body.classList.remove(
+        "a11y-high-contrast",
+        "a11y-highlight-links",
+        "a11y-no-animations",
+        "a11y-grayscale",
+        "a11y-big-cursor"
+      );
+      saveSettings();
+    }
+
+    toggleBtn.addEventListener("click", function () {
+      panel.classList.toggle("open");
+      panel.setAttribute("aria-hidden", panel.classList.contains("open") ? "false" : "true");
+    });
+
+    closeBtn.addEventListener("click", function () {
+      panel.classList.remove("open");
+      panel.setAttribute("aria-hidden", "true");
+    });
+
+    document.addEventListener("click", function (e) {
+      const widget = document.getElementById("accessibility-widget");
+      if (!widget.contains(e.target)) {
+        panel.classList.remove("open");
+        panel.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    actionButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const action = this.dataset.action;
+
+        switch (action) {
+          case "increase-text":
+            settings.textScale = Math.min(settings.textScale + 10, 150);
+            applyAllSettings();
+            break;
+
+          case "decrease-text":
+            settings.textScale = Math.max(settings.textScale - 10, 80);
+            applyAllSettings();
+            break;
+
+          case "toggle-contrast":
+            settings.highContrast = !settings.highContrast;
+            applyAllSettings();
+            break;
+
+          case "toggle-links":
+            settings.highlightLinks = !settings.highlightLinks;
+            applyAllSettings();
+            break;
+
+          case "toggle-animations":
+            settings.noAnimations = !settings.noAnimations;
+            applyAllSettings();
+            break;
+
+          case "toggle-grayscale":
+            settings.grayscale = !settings.grayscale;
+            applyAllSettings();
+            break;
+
+          case "toggle-cursor":
+            settings.bigCursor = !settings.bigCursor;
+            applyAllSettings();
+            break;
+
+          case "reset":
+            resetAll();
+            break;
+        }
+      });
+    });
+
+    cacheBaseSizes();
+    applyAllSettings();
+
+    window.addEventListener("load", function () {
+      cacheBaseSizes();
+      applyAllSettings();
+    });
+
+    window.addEventListener("resize", function () {
+      cacheBaseSizes();
+    });
+  })();
+</script>
 </body>
 
 </html>
