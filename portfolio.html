@@ -382,6 +382,272 @@
     disableScrolling: true
   });
 </script> 
+<!-- ACCESIBILITATE TEXT -->
+<div id="accessibility-widget">
+  <button id="a11y-toggle" aria-label="Text" title="Text">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="5" r="2" fill="currentColor"></circle>
+      <path d="M12 7c-3 0-5 1-5 1v2h3v3l-2 6h2l2-5 2 5h2l-2-6v-3h3V8s-2-1-5-1z" fill="currentColor"></path>
+    </svg>
+  </button>
+
+  <div id="a11y-panel" aria-hidden="true">
+    <div class="a11y-header">
+      <strong>Text</strong>
+      <button id="a11y-close" aria-label="Închide">×</button>
+    </div>
+
+    <p class="a11y-subtitle">Mărește textul pentru o citire mai ușoară.</p>
+
+    <div class="a11y-actions">
+      <button type="button" data-action="increase-text">Text +</button>
+      <button type="button" data-action="reset">Reset</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #accessibility-widget {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99999;
+    font-family: inherit;
+  }
+
+  #a11y-toggle {
+    width: 62px;
+    height: 62px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8c6a16, #c9a227 48%, #f1d77a 100%);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  }
+
+  #a11y-toggle:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.36);
+    filter: brightness(1.05);
+  }
+
+  #a11y-toggle:active {
+    transform: scale(0.98);
+  }
+
+  #a11y-panel {
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+    width: 270px;
+    max-width: calc(100vw - 24px);
+    background: rgba(17, 17, 17, 0.94);
+    color: #ffffff;
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-radius: 18px;
+    padding: 16px;
+    display: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+  }
+
+  #a11y-panel.open {
+    display: block;
+  }
+
+  .a11y-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .a11y-header strong {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #d4af37;
+  }
+
+  #a11y-close {
+    border: none;
+    background: transparent;
+    color: #d4af37;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  #a11y-close:hover {
+    background: rgba(212, 175, 55, 0.12);
+    color: #f3d46b;
+  }
+
+  .a11y-subtitle {
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #d6d6d6;
+  }
+
+  .a11y-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .a11y-actions button {
+    padding: 11px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    background: rgba(212, 175, 55, 0.08);
+    color: #f5f5f5;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .a11y-actions button:hover {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #111111;
+    transform: translateY(-1px);
+  }
+
+  .a11y-actions button:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 768px) {
+    #accessibility-widget {
+      right: 14px;
+      bottom: 14px;
+    }
+
+    #a11y-toggle {
+      width: 56px;
+      height: 56px;
+    }
+
+    #a11y-panel {
+      width: 240px;
+      bottom: 70px;
+      padding: 14px;
+    }
+
+    .a11y-actions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const toggleBtn = document.getElementById("a11y-toggle");
+    const panel = document.getElementById("a11y-panel");
+    const closeBtn = document.getElementById("a11y-close");
+    const buttons = document.querySelectorAll("#a11y-panel button[data-action]");
+
+    let textScale = 100;
+
+    const textSelectors = [
+      "p",
+      "li",
+      "a",
+      "label",
+      "blockquote",
+      "figcaption",
+      "td",
+      "th"
+    ].join(",");
+
+    function getTextElements() {
+      return Array.from(document.querySelectorAll(textSelectors)).filter((el) => {
+        if (!el.textContent || !el.textContent.trim()) return false;
+        if (el.closest("#accessibility-widget")) return false;
+        return true;
+      });
+    }
+
+    function cacheBaseSizes() {
+      getTextElements().forEach((el) => {
+        if (!el.dataset.a11yBaseSize) {
+          el.dataset.a11yBaseSize = parseFloat(window.getComputedStyle(el).fontSize);
+        }
+      });
+    }
+
+    function applyTextScale() {
+      cacheBaseSizes();
+
+      getTextElements().forEach((el) => {
+        const base = parseFloat(el.dataset.a11yBaseSize);
+        if (!base || Number.isNaN(base)) return;
+
+        const newSize = (base * textScale) / 100;
+        el.style.fontSize = newSize + "px";
+      });
+    }
+
+    function resetText() {
+      getTextElements().forEach((el) => {
+        el.style.fontSize = "";
+        delete el.dataset.a11yBaseSize;
+      });
+
+      textScale = 100;
+      cacheBaseSizes();
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const action = btn.dataset.action;
+
+        if (action === "increase-text") {
+          textScale = textScale >= 150 ? 100 : textScale + 10;
+          applyTextScale();
+        }
+
+        if (action === "reset") {
+          resetText();
+        }
+      });
+    });
+
+    toggleBtn.addEventListener("click", () => {
+      panel.classList.toggle("open");
+      panel.setAttribute("aria-hidden", panel.classList.contains("open") ? "false" : "true");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open");
+      panel.setAttribute("aria-hidden", "true");
+    });
+
+    document.addEventListener("click", (e) => {
+      const widget = document.getElementById("accessibility-widget");
+      if (!widget.contains(e.target)) {
+        panel.classList.remove("open");
+        panel.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    cacheBaseSizes();
+  })();
+</script>
 </body>
 
 </html>
