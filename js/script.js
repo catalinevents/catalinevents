@@ -110,11 +110,16 @@ fadeIns.forEach(el => {
   el.style.transition = 'all 0.8s ease';
   observer.observe(el);
 });
-// 🍔 Hamburger Menu
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
-  navLinks.classList.toggle("show");
+    navLinks.classList.toggle("show");
+ 
 }
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("show");
+      });
+});
 // Popup pentru cardurile din Servicii
 const serviciuCards = document.querySelectorAll(".serviciu-card");
 const serviciuModal = document.getElementById("serviciu-modal");
