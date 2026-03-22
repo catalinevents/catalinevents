@@ -162,7 +162,8 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 100px 20px;
+  margin-top: -120px;
 }
 
 .highlight-section .overlay {
@@ -607,6 +608,137 @@ header {
   font-size: 36px;
   cursor: pointer;
   line-height: 1;
+}
+.testimonials-editorial {
+  padding: 120px 10px;
+  background: #f8f6f2;
+}
+
+.testimonials-editorial-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.testimonials-left {
+  padding-top: 30px;
+}
+
+.testimonials-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b28b4d;
+}
+
+.testimonials-left h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  color: #111;
+}
+
+.testimonials-left p {
+  max-width: 380px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #555;
+}
+
+.testimonials-right {
+  position: relative;
+  min-height: 560px;
+}
+
+.testimonial-card {
+  position: absolute;
+  border-radius: 28px;
+  padding: 34px 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.18);
+}
+.testimonial-card p {
+  position: relative;
+  z-index: 1;
+  margin: 14px 0 18px;
+  line-height: 1.75;
+}
+
+.testimonial-card span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-weight: 600;
+}
+
+.stars {
+  position: relative;
+  z-index: 1;
+  color: #d4af37;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.testimonial-card-main {
+  width: 460px;
+  min-height: 250px;
+  background: #264653;
+  color: #fff;
+  top: 0;
+  left: -20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+.testimonial-card-main::before {
+  content: "“";
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  font-size: 110px;
+  line-height: 1;
+  color: #ffffff;
+  opacity: 0.10;
+}
+
+.testimonial-card-light {
+  width: 270px;
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card-light::before {
+  content: "“";
+  position: absolute;
+  top: 2px;
+  left: 16px;
+  font-size: 90px;
+  line-height: 1;
+  color: #d4af37;
+  opacity: 0.16;
+}
+
+.testimonial-card-top {
+  top:140px;
+  right: 10px;
+
+}
+
+.testimonial-card-bottom {
+  top: 200px;
+  left: -100px;
+  
 }
 
 /* ====== DESPRE ====== */
@@ -1337,7 +1469,70 @@ buttons.packages-section h2 {
   .servicii-preview h2 {
     font-size: 28px;
   }
+.testimonials-editorial {
+  padding: 70px 20px;
+}
 
+.testimonials-editorial-wrapper {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.testimonials-left {
+  padding-top: 0;
+  text-align: center;
+}
+
+.testimonials-left h2 {
+  font-size: 30px;
+}
+
+.testimonials-left p {
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.testimonials-right {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-card {
+  position: relative;
+  width: 100% !important;
+  min-height: auto;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  padding: 28px 24px;
+}
+
+.testimonial-card-main::before {
+  top: 10px;
+  left: 14px;
+  font-size: 70px;
+  opacity: 0.10;
+}
+
+.testimonial-card-light::before {
+  top: 8px;
+  left: 14px;
+  font-size: 64px;
+  opacity: 0.14;
+}
+
+.testimonial-card p {
+  margin: 12px 0 16px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.stars {
+  font-size: 16px;
+}
   /* css mobile pentru despre */
   .hero-despre {
     padding-top: 100px;

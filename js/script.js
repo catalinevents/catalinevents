@@ -162,4 +162,5 @@ if (serviciuCards.length && serviciuModal && modalContent && closeModal) {
       modalContent.innerHTML = "";
     }
   });
+
 }
