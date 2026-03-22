@@ -162,5 +162,18 @@ if (serviciuCards.length && serviciuModal && modalContent && closeModal) {
       modalContent.innerHTML = "";
     }
   });
+document.querySelectorAll(".faq-question").forEach(btn => {
+btn.addEventListener("click", () => {
 
+const answer = btn.nextElementSibling;
+
+if(answer.style.maxHeight){
+answer.style.maxHeight = null;
+}
+else{
+answer.style.maxHeight = answer.scrollHeight + "px";
+}
+
+});
+});
 }
