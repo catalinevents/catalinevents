@@ -379,7 +379,131 @@ header {
   margin: 0 auto 40px;
   color: #000000;
 }
+.about-short {
+  padding: 100px 20px;
+  background: #f8f6f2;
+}
 
+.about-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-text {
+  flex: 1.1;
+}
+
+.about-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b28b4d;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  color: #111;
+}
+
+.about-text p {
+  max-width: 620px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.about-card {
+  flex: 0.9;
+  min-height: 320px;
+  padding: 60px;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  border-radius: 28px;
+  background: #264653;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFade 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.about-card::before {
+  content: "“";
+  position: absolute;
+
+  top: 25px;
+  left: 30px;
+
+  font-size: 110px;
+  font-weight: bold;
+
+  color: #c9a45c;
+  opacity: 0;
+
+  transform: translateY(-10px);
+
+  animation: quoteFade 1s ease forwards;
+  animation-delay: 0.6s;
+}
+@keyframes quoteFade {
+  to {
+    opacity: 0.18;
+    transform: translateY(0);
+  }
+}
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-card-text {
+  position: relative;
+  z-index: 1;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #fff;
+  max-width: 320px;
+}
+
+.glass-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 28px;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  color: white;
+
+  background: #264653;
+  border: 1px solid #264653;
+
+  transition: all 0.3s ease;
+}
+
+.glass-btn:hover {
+  background: #1f3a45;
+  border: 1px solid #1f3a45;
+  transform: translateY(-2px);
+}
 /* Butoane / Call to Action */
 .gallery-button-wrapper {
   text-align: center;
@@ -609,7 +733,7 @@ header {
 }
 
 .contact-cta {
-  background: rgba(0, 0, 0, 0.75);
+  background:#264653;
   color: white;
   padding: 100px 20px;
   text-align: center;
@@ -1163,6 +1287,46 @@ buttons.packages-section h2 {
     width: 100px;
   }
 
+  .about-short {
+  padding: 70px 20px;
+}
+
+.about-wrapper {
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: 30px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-card {
+  width: 100%;
+  min-height: 220px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card-text {
+  font-size: 24px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.about-card::before {
+  top: 12px;
+  left: 18px;
+  font-size: 70px;
+  opacity: 0.12;
+}
   .servicii-grid {
     grid-template-columns: 1fr;
     /* una pe rând */
